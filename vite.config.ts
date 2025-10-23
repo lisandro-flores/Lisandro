@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Base necesaria para GitHub Pages (repositorio de proyecto)
-  // URL final: https://lisandro-flores.github.io/miPage/
-  base: '/miPage/',
+  // URL final: https://lisandro-flores.github.io/Lisandro/
+  base: '/Lisandro/',
 })
