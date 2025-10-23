@@ -1,13 +1,17 @@
+import data from '../data/information.json'
+
 function Footer() {
+  const { personal, redes } = data
+
   return (
     <footer className="footer">
       <div className="footer-container container">
-        <p>&copy; 2025 Lisandro Flores Ortega. Todos los derechos reservados.</p>
+        <p>&copy; 2025 {personal.nombre}. Todos los derechos reservados.</p>
         <div className="footer-social">
-           <a href="https://www.linkedin.com/in/lisandro-flores-73347b2b4" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="LinkedIn">
+           <a href={redes.linkedin} target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="LinkedIn">
               <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/lisandro-flores" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="GitHub">
+          <a href={redes.github} target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="GitHub">
               <i className="fa-brands fa-github"></i>
           </a>
         </div>

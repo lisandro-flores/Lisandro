@@ -1,18 +1,16 @@
+import data from '../data/information.json'
+
 function SobreMi() {
+  const { sobreMi } = data
+
   return (
     <section className="sobre-mi" id="sobre-mi">
-      <h2 className="section-title">Sobre Mí</h2>
+      <h2 className="section-title reveal">Sobre Mí</h2>
       <div className="sobre-mi-container container grid">
-        <div className="sobre-mi-data">
-          <p>
-            Desarrollador Backend junior, próximo a egresar de Ingeniería de Software.
-            Tengo experiencia práctica construyendo y desplegando APIs RESTful seguras con
-            Node.js (OWASP) y aplicaciones full-stack con Next.js/Firebase.
-          </p>
-          <p>
-            Mi enfoque es la creación de sistemas eficientes, desde el
-            desarrollo hasta la producción.
-          </p>
+        <div className="sobre-mi-data reveal reveal-delay-1">
+          {sobreMi.parrafos.map((parrafo, index) => (
+            <p key={index}>{parrafo}</p>
+          ))}
         </div>
       </div>
     </section>

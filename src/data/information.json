@@ -1,0 +1,77 @@
+{
+  "personal": {
+    "nombre": "Lisandro Flores Ortega",
+    "titulo": "Ingeniero en Desarrollo y Gestión de Software | Backend Developer",
+    "fotoPerfil": "/foto-perfil.jpg",
+    "email": "lisandroflores23027@gmail.com"
+  },
+  "redes": {
+    "linkedin": "https://www.linkedin.com/in/lisandro-flores-73347b2b4",
+    "github": "https://github.com/lisandro-flores"
+  },
+  "sobreMi": {
+    "parrafos": [
+      "Desarrollador Backend junior, próximo a egresar de Ingeniería de Software. Tengo experiencia práctica construyendo y desplegando APIs RESTful seguras con Node.js (OWASP) y aplicaciones full-stack con Next.js/Firebase.",
+      "Mi enfoque es la creación de sistemas eficientes, desde el desarrollo hasta la producción."
+    ]
+  },
+  "habilidades": [
+    {
+      "categoria": "Lenguajes de Programación",
+      "items": ["JavaScript", "TypeScript", "Go"]
+    },
+    {
+      "categoria": "Backend",
+      "items": ["Node.js", "Express", "Gin", "Fiber"]
+    },
+    {
+      "categoria": "Frontend",
+      "items": ["React", "Next.js"]
+    },
+    {
+      "categoria": "Bases de Datos",
+      "items": ["MongoDB", "MySQL", "Firebase", "PostgreSQL"]
+    },
+    {
+      "categoria": "Herramientas y Metodologías",
+      "items": ["GitHub", "Docker", "Postman", "Cpanel", "Scrum", "Lean Startup"]
+    },
+    {
+      "categoria": "Idiomas",
+      "items": ["Español (Nativo)", "Inglés (Básico A2)"]
+    }
+  ],
+  "proyectos": [
+    {
+      "titulo": "Sistema de Gestión de Contenido (CMS) - UTTECAM",
+      "descripcion": "Colaboré en el diseño y construcción de una API RESTful con Node.js/Express, implementando autenticación y aplicando las 10 mejores prácticas de seguridad de OWASP. Fui responsable del despliegue backend en producción (CPanel).",
+      "demo": "https://uttecam.edu.mx",
+      "tipo": "demo",
+      "tags": ["Node.js", "Express", "OWASP", "CPanel", "REST API"]
+    },
+    {
+      "titulo": "Truekland - App Web de Intercambio",
+      "descripcion": "Colaboré en una aplicación web full-stack, desarrollando la interfaz con Next.js y conectándola a Firebase (Firestore/Auth). Implementé la lógica de negocio y el ciclo de usuario completo desde el frontend.",
+      "demo": "https://trueklandweb.vercel.app",
+      "tipo": "demo",
+      "tags": ["Next.js", "React", "Firebase", "Firestore", "TypeScript"]
+    },
+    {
+      "titulo": "Análisis de Logs en Tiempo Real",
+      "descripcion": "Diseñé la arquitectura inicial para un sistema de análisis de logs, implementando un backend de alto rendimiento con Go (Gin), WebSockets para transmisión en vivo y PostgreSQL.",
+      "repositorio": "https://github.com/lisandro-flores/realtime-logs",
+      "tipo": "repositorio",
+      "tags": ["Go", "Gin", "WebSockets", "PostgreSQL", "Real-time"]
+    }
+  ],
+  "formacion": [
+    {
+      "titulo": "Ingeniería en Desarrollo y Gestión de Software",
+      "periodo": "2024 - Presente (Graduación prevista: 2026)"
+    },
+    {
+      "titulo": "TSU en Desarrollo de software multiplataforma",
+      "periodo": "2022 - 2024"
+    }
+  ]
+}
