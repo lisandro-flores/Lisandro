@@ -2,6 +2,8 @@ import data from '../data/information.json'
 
 function Inicio() {
   const { personal, redes } = data
+  // Usar import.meta.env.BASE_URL para que funcione con cualquier base de Vite
+  const fotoUrl = `${import.meta.env.BASE_URL}${personal.fotoPerfil}`
 
   return (
     <section className="inicio" id="inicio">
@@ -23,7 +25,7 @@ function Inicio() {
         </div>
         
         <div className="inicio-img">
-          <img src={personal.fotoPerfil} alt={`Foto de ${personal.nombre}`} className="inicio-foto" width={250} height={250} />
+          <img src={fotoUrl} alt={`Foto de ${personal.nombre}`} className="inicio-foto" width={250} height={250} />
         </div>
       </div>
     </section>
