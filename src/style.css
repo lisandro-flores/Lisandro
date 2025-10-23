@@ -2,17 +2,17 @@
 :root {
     --header-height: 3.5rem;
     
-    /* Colores */
-    --color-primario: hsl(207, 90%, 54%);
-    --color-primario-alt: hsl(207, 90%, 44%);
-    --color-titulo: hsl(207, 12%, 15%);
-    --color-texto: hsl(207, 12%, 45%);
-    --color-texto-claro: hsl(207, 12%, 65%);
-    --color-input: hsl(207, 12%, 85%);
-    --color-body: hsl(207, 12%, 98%);
-    --color-container: #fff;
-    --color-scroll: hsl(207, 12%, 90%);
-    --color-scroll-thumb: hsl(207, 12%, 80%);
+    /* Colores - Tema oscuro elegante */
+    --color-primario: #7c5cff;           /* Púrpura elegante */
+    --color-primario-alt: #6b4eff;       /* Púrpura más oscuro */
+    --color-titulo: #e6eaf2;             /* Títulos claros */
+    --color-texto: #b3bcc9;              /* Texto */
+    --color-texto-claro: #8a94a6;        /* Texto secundario */
+    --color-input: #223045;
+    --color-body: #0b0f14;               /* Fondo global */
+    --color-container: #121821;          /* Superficies / tarjetas */
+    --color-scroll: #1a2230;
+    --color-scroll-thumb: #2a3446;
 
     /* Tipografía */
     --fuente-body: "Poppins", sans-serif;
@@ -72,8 +72,25 @@ body {
     margin: 0 0 var(--header-height) 0;
     font-family: var(--fuente-body);
     font-size: var(--fuente-normal);
-    background-color: var(--color-body);
+    background:
+      radial-gradient(1200px 800px at 0% -10%, rgba(124, 92, 255, 0.12), transparent 60%),
+      linear-gradient(180deg, var(--color-body), var(--color-body));
     color: var(--color-texto);
+}
+
+/* Enlace para saltar al contenido principal */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 1rem;
+    background: #000;
+    color: #fff;
+    padding: .5rem 1rem;
+    z-index: var(--z-modal);
+    border-radius: .25rem;
+}
+.skip-link:focus {
+    top: .5rem;
 }
 
 h1, h2, h3, h4 {
@@ -84,10 +101,70 @@ h1, h2, h3, h4 {
 ul {
     list-style: none;
 }
+    .nav-link:focus {
+        outline: 2px solid var(--color-primario);
+        outline-offset: 2px;
+    }
+
+    .nav-link.active {
+        color: var(--color-primario);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .button:focus {
+        outline: 2px solid var(--color-primario);
+        outline-offset: 2px;
+    }
+
+    /* Toggle del menú (móvil) */
+    .nav-toggle {
+        background: transparent;
+        border: 0;
+        color: var(--color-titulo);
+        font-size: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Menú móvil por defecto oculto */
+    @media screen and (max-width: 768px) {
+        .nav {
+            gap: 1rem;
+        }
+        .nav-menu {
+            position: absolute;
+            top: var(--header-height);
+            right: 0;
+            left: 0;
+            background: var(--color-body);
+            border-top: 1px solid var(--color-scroll);
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            padding: .5rem 1rem 1rem;
+        }
+        .nav-menu.open {
+            display: flex;
+        }
+        .nav-item + .nav-item {
+            border-top: 1px solid var(--color-scroll);
+        }
+        .nav-link {
+            display: block;
+            padding: .75rem 0;
+        }
+    }
 
 a {
     text-decoration: none;
 }
+
+    /* Evitar que el header fijo tape los anclajes */
+    section[id] {
+        scroll-margin-top: calc(var(--header-height) + 1rem);
+    }
 
 img {
     max-width: 100%;
@@ -147,8 +224,9 @@ img {
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--color-body);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-container);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .nav {
@@ -181,6 +259,23 @@ img {
 
 .nav-link:hover {
     color: var(--color-primario);
+}
+
+/* Accesibilidad y estados activos */
+.nav-link:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+.nav-link.active {
+    color: var(--color-primario);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.button:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
 }
 
 /* ======== INICIO ======== */
@@ -236,7 +331,8 @@ img {
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    border: 2px solid rgba(255,255,255,0.08);
 }
 
 /* ======== SOBRE MÍ ======== */
@@ -266,10 +362,11 @@ img {
 }
 
 .skill-box {
-    background-color: var(--color-body);
+    background-color: #0f141b;
     padding: 1.5rem;
     border-radius: .5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255,255,255,0.04);
 }
 
 .skill-box h3 {
@@ -300,12 +397,15 @@ img {
     background-color: var(--color-container);
     padding: 2rem;
     border-radius: .5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform .3s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    border: 1px solid rgba(255,255,255,0.04);
 }
 
 .proyecto-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    border-color: rgba(255,255,255,0.08);
 }
 
 .proyecto-content h4 {
@@ -342,11 +442,12 @@ img {
 }
 
 .formacion-item {
-    background-color: var(--color-body);
+    background-color: #0f141b;
     padding: 1.5rem;
     border-radius: .5rem;
     margin-bottom: var(--mb-2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.04);
 }
 
 .formacion-item h4 {
@@ -375,9 +476,10 @@ img {
 
 /* ======== FOOTER ======== */
 .footer {
-    background-color: var(--color-titulo);
+    background-color: var(--color-container);
     padding: 2rem 0;
     color: #fff;
+    border-top: 1px solid rgba(255,255,255,0.04);
 }
 
 .footer-container {

@@ -20,7 +20,7 @@ function Inicio() {
         
         <div className="inicio-img">
           {/* La imagen se sirve desde la carpeta 'public/' */}
-          <img src="/foto-perfil.jpg" alt="Foto de Lisandro Flores" className="inicio-foto" />
+          <img src="/foto-perfil.jpg" alt="Foto de Lisandro Flores" className="inicio-foto" width={250} height={250} />
         </div>
       </div>
     </section>
