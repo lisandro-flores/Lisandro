@@ -11,6 +11,10 @@ function Inicio() {
         <div className="inicio-content">
           <h1>Hola, soy {personal.nombre}</h1>
           <h3>{personal.titulo}</h3>
+          <div className="inicio-actions">
+            <a href="#proyectos" className="button">Ver proyectos <i className="fa-solid fa-arrow-down"></i></a>
+            <a href="#contacto" className="button button-secondary">Contactarme <i className="fa-solid fa-paper-plane"></i></a>
+          </div>
           <div className="inicio-social">
             <a href={redes.linkedin} target="_blank" rel="noopener noreferrer" className="inicio-social-icon" aria-label="LinkedIn">
               <i className="fa-brands fa-linkedin"></i>

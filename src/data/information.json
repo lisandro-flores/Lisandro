@@ -1,18 +1,18 @@
 {
   "personal": {
     "nombre": "Lisandro Flores Ortega",
-    "titulo": "Ingeniero en Desarrollo y Gestión de Software | Backend Developer",
+    "titulo": "Full Stack Developer | React · Angular · TypeScript",
     "fotoPerfil": "foto-perfil.jpg",
     "email": "lisandroflores23027@gmail.com"
   },
   "redes": {
-    "linkedin": "https://www.linkedin.com/in/lisandro-flores-73347b2b4",
+    "linkedin": "https://www.linkedin.com/in/lisandro-flores/",
     "github": "https://github.com/lisandro-flores"
   },
   "sobreMi": {
     "parrafos": [
-      "Desarrollador Backend junior, próximo a egresar de Ingeniería de Software. Tengo experiencia práctica construyendo y desplegando APIs RESTful seguras con Node.js (OWASP) y aplicaciones full-stack con Next.js/Firebase.",
-      "Mi enfoque es la creación de sistemas eficientes, desde el desarrollo hasta la producción."
+      "Desarrollador Full Stack e Ingeniero en Desarrollo y Gestión de Software, con experiencia construyendo interfaces web responsivas con React, Angular, TypeScript y Tailwind CSS, además de APIs REST con Node.js y NestJS.",
+      "He participado en productos SaaS reales: en Digyto Solutions trabajé con Angular en módulos de una plataforma empresarial, y en NgiCode diseñé y publiqué NgiCaja para web, PWA y Android. Me enfoco en interfaces claras, código mantenible y calidad mediante pruebas automatizadas."
     ]
   },
   "habilidades": [
@@ -22,56 +22,55 @@
     },
     {
       "categoria": "Backend",
-      "items": ["Node.js", "Express", "Gin", "Fiber"]
+      "items": ["Node.js", "NestJS", "Express", "REST", "JWT", "RBAC", "WebSockets", "Go"]
     },
     {
       "categoria": "Frontend",
-      "items": ["React", "Next.js"]
+      "items": ["Angular", "React", "TypeScript", "Tailwind CSS", "Ionic", "Capacitor", "Next.js", "HTML", "CSS"]
     },
     {
       "categoria": "Bases de Datos",
-      "items": ["MongoDB", "MySQL", "Firebase", "PostgreSQL"]
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "SQL", "Prisma ORM"]
     },
     {
-      "categoria": "Herramientas y Metodologías",
-      "items": ["GitHub", "Docker", "Postman", "Cpanel", "Scrum", "Lean Startup"]
+      "categoria": "Calidad y herramientas",
+      "items": ["Docker", "Linux", "Git/GitHub", "CI/CD", "Jest", "Cypress", "Postman", "Scrum"]
     },
     {
       "categoria": "Idiomas",
-      "items": ["Español (Nativo)", "Inglés (Básico A2)"]
+      "items": ["Español (Nativo)", "Inglés (Lectura técnica)"]
     }
   ],
   "proyectos": [
     {
-      "titulo": "Sistema de Gestión de Contenido (CMS) - UTTECAM",
-      "descripcion": "Colaboré en el diseño y construcción de una API RESTful con Node.js/Express, implementando autenticación y aplicando las 10 mejores prácticas de seguridad de OWASP. Fui responsable del despliegue backend en producción (CPanel).",
-      "demo": "https://uttecam.edu.mx",
+      "titulo": "NgiCaja - SaaS de punto de venta",
+      "descripcion": "Diseñé y publiqué una aplicación SaaS para web, PWA y Android. Construí interfaces responsivas para ventas, inventario, tickets, reportes y suscripciones, con operación offline, integración con Stripe y 979 pruebas automatizadas.",
       "tipo": "demo",
-      "tags": ["Node.js", "Express", "OWASP", "CPanel", "REST API"]
+      "demo": "https://caja.ngicode.com",
+      "tags": ["React", "Ionic", "TypeScript", "NestJS", "PostgreSQL", "Cypress"]
     },
     {
-      "titulo": "Truekland - App Web de Intercambio",
-      "descripcion": "Colaboré en una aplicación web full-stack, desarrollando la interfaz con Next.js y conectándola a Firebase (Firestore/Auth). Implementé la lógica de negocio y el ciclo de usuario completo desde el frontend.",
-      "demo": "https://trueklandweb.vercel.app",
-      "tipo": "demo",
-      "tags": ["Next.js", "React", "Firebase", "Firestore", "TypeScript"]
+      "titulo": "Plataforma empresarial - Digyto Solutions",
+      "descripcion": "Trabajé en una plataforma SaaS con Angular y TypeScript: refactoricé módulos de RBAC, onboarding y conexiones con QR, y construí un Page Builder con exportación a HTML estático y Lazy Loading.",
+      "tipo": "experiencia",
+      "tags": ["Angular", "TypeScript", "HTML", "Lazy Loading", "SaaS"]
     },
     {
       "titulo": "Análisis de Logs en Tiempo Real",
       "descripcion": "Diseñé la arquitectura inicial para un sistema de análisis de logs, implementando un backend de alto rendimiento con Go (Gin), WebSockets para transmisión en vivo y PostgreSQL.",
       "repositorio": "https://github.com/lisandro-flores/realtime-logs",
       "tipo": "repositorio",
-      "tags": ["Go", "Gin", "WebSockets", "PostgreSQL", "Real-time"]
+      "tags": ["Go", "Gin", "WebSockets", "PostgreSQL", "Rendimiento"]
     }
   ],
   "formacion": [
     {
       "titulo": "Ingeniería en Desarrollo y Gestión de Software",
-      "periodo": "2024 - Presente (Graduación prevista: 2026)"
+      "periodo": "UTTECAM · sep 2024 - may 2026 · Egresado; examen de titulación concluido"
     },
     {
       "titulo": "TSU en Desarrollo de software multiplataforma",
-      "periodo": "2022 - 2024"
+      "periodo": "UTTECAM · sep 2022 - sep 2024"
     }
   ]
 }

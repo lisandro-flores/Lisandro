@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container container">
-        <p>&copy; 2025 {personal.nombre}. Todos los derechos reservados.</p>
+        <p>&copy; 2026 {personal.nombre}. Todos los derechos reservados.</p>
         <div className="footer-social">
            <a href={redes.linkedin} target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="LinkedIn">
               <i className="fa-brands fa-linkedin"></i>

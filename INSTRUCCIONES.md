@@ -60,7 +60,7 @@ miPagina/
 
 ## 🛠️ Tecnologías utilizadas
 
-- React 18
+- React 19
 - Vite
 - TypeScript
 - CSS3
@@ -70,13 +70,10 @@ miPagina/
 
 Para personalizar el portafolio con tu información:
 
-1. **Información personal:** Edita `src/components/Inicio.tsx`
-2. **Sobre mí:** Edita `src/components/SobreMi.tsx`
-3. **Habilidades:** Edita `src/components/Skills.tsx`
-4. **Proyectos:** Edita `src/components/Proyectos.tsx`
-5. **Formación:** Edita `src/components/Formacion.tsx`
-6. **Contacto:** Edita `src/components/Contacto.tsx`
-7. **Estilos:** Edita `src/style.css`
+1. **Información personal, habilidades, proyectos y formación:** Edita `src/data/information.json`
+2. **Contacto:** Edita `src/data/information.json` y conserva el correo usado por los enlaces `mailto:`
+3. **Componentes y estructura:** Edita los archivos correspondientes en `src/components/`
+4. **Estilos:** Edita `src/style.css`
 
 ## 📄 Licencia
 

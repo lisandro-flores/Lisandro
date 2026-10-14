@@ -495,6 +495,25 @@ img {
     margin-top: var(--mb-2);
 }
 
+.inicio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: var(--mb-1);
+}
+
+.button-secondary {
+    background: transparent;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.button-secondary:hover {
+    color: var(--color-container);
+    background: var(--color-primario);
+}
+
 .inicio-social-icon {
     font-size: 1.5rem;
     color: var(--color-primario);
@@ -660,6 +679,14 @@ html[data-theme='light'] .skill-box {
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+.proyecto-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--color-texto-claro);
+    font-size: var(--fuente-pequena);
 }
 
 /* ======== FORMACIÓN ======== */
