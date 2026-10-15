@@ -4,6 +4,7 @@ function Inicio() {
   const { personal, redes } = data
   // Usar import.meta.env.BASE_URL para que funcione con cualquier base de Vite
   const fotoUrl = `${import.meta.env.BASE_URL}${personal.fotoPerfil}`
+  const cvUrl = `${import.meta.env.BASE_URL}CV_LisandroFlores.pdf`
 
   return (
     <section className="inicio" id="inicio">
@@ -13,6 +14,9 @@ function Inicio() {
           <h3>{personal.titulo}</h3>
           <div className="inicio-actions">
             <a href="#proyectos" className="button">Ver proyectos <i className="fa-solid fa-arrow-down"></i></a>
+            <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="button button-secondary">
+              Descargar CV <i className="fa-solid fa-file-pdf"></i>
+            </a>
             <a href="#contacto" className="button button-secondary">Contactarme <i className="fa-solid fa-paper-plane"></i></a>
           </div>
           <div className="inicio-social">

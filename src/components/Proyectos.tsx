@@ -28,6 +28,11 @@ function Proyectos() {
                     <i className="fa-solid fa-briefcase"></i> Experiencia profesional
                   </span>
                 )}
+                {proyecto.tipo === 'institucional' && (
+                  <span className="proyecto-status">
+                    <i className="fa-solid fa-building-columns"></i> En producción institucional
+                  </span>
+                )}
                 {proyecto.tipo === 'demo' && proyecto.demo && (
                   <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className="button">
                     Ver Demo <i className="fa-solid fa-arrow-right"></i>
