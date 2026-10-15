@@ -12,7 +12,7 @@
   "sobreMi": {
     "parrafos": [
       "Desarrollador Full Stack e Ingeniero en Desarrollo y Gestión de Software, con experiencia construyendo interfaces web responsivas con React, Angular, TypeScript y Tailwind CSS, además de APIs REST con Node.js y NestJS.",
-      "He participado en productos SaaS reales: en Digyto Solutions trabajé con Angular en módulos de una plataforma empresarial, y en NgiCode diseñé y publiqué NgiCaja para web, PWA y Android. Me enfoco en interfaces claras, código mantenible y calidad mediante pruebas automatizadas."
+      "He participado en productos SaaS y sistemas web en producción: en Digyto Solutions trabajé con Angular en módulos de una plataforma empresarial, y en NgiCode colaboré en una aplicación para web, PWA y Android. Me enfoco en interfaces claras, código mantenible y calidad mediante pruebas automatizadas."
     ]
   },
   "habilidades": [
@@ -44,7 +44,7 @@
   "proyectos": [
     {
       "titulo": "NgiCaja - SaaS de punto de venta",
-      "descripcion": "Diseñé y publiqué una aplicación SaaS para web, PWA y Android. Construí interfaces responsivas para ventas, inventario, tickets, reportes y suscripciones, con operación offline, integración con Stripe y 979 pruebas automatizadas.",
+      "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada. Incluye interfaces responsivas para ventas, inventario, tickets, reportes y suscripciones, además de operación offline, integración con Stripe y pruebas automatizadas.",
       "tipo": "demo",
       "demo": "https://caja.ngicode.com",
       "tags": ["React", "Ionic", "TypeScript", "NestJS", "PostgreSQL", "Cypress"]
