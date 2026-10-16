@@ -19,15 +19,15 @@
   "habilidades": [
     {
       "categoria": "Lenguajes de Programación",
-      "items": ["JavaScript", "TypeScript", "Go"]
+      "items": ["TypeScript", "JavaScript", "Go"]
     },
     {
       "categoria": "Backend",
-      "items": ["Node.js", "NestJS", "Express", "REST", "JWT", "RBAC", "WebSockets", "Go"]
+      "items": ["Node.js", "NestJS", "Express", "REST APIs", "Webhooks", "JWT", "RBAC", "WebSockets", "Go"]
     },
     {
       "categoria": "Frontend",
-      "items": ["Angular", "React", "TypeScript", "Tailwind CSS", "Ionic", "Capacitor", "Next.js", "HTML", "CSS"]
+      "items": ["TypeScript", "React", "Angular", "Tailwind CSS", "Ionic", "Capacitor", "Next.js", "HTML", "CSS"]
     },
     {
       "categoria": "Bases de Datos",
@@ -39,7 +39,7 @@
     },
     {
       "categoria": "Idiomas",
-      "items": ["Español (Nativo)", "Inglés (Lectura técnica)"]
+      "items": ["Español (Nativo)", "Inglés (Lectura y documentación técnica)"]
     }
   ],
   "proyectos": [
@@ -73,7 +73,7 @@
   "formacion": [
     {
       "titulo": "Ingeniería en Desarrollo y Gestión de Software",
-      "periodo": "UTTECAM · sep 2024 – may 2026 · Egresado · Examen de titulación aprobado · Promedio: 9.63"
+      "periodo": "UTTECAM · sep 2024 – may 2026 · Protesta profesional (jun 2026) · Título en trámite · Promedio: 9.45"
     },
     {
       "titulo": "TSU en Desarrollo de software multiplataforma",
