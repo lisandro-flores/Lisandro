@@ -1,7 +1,7 @@
 {
   "personal": {
     "nombre": "Lisandro Flores Ortega",
-    "titulo": "Full Stack Developer | React · Angular · TypeScript",
+    "titulo": "Full Stack Developer | React · Angular · Node.js · NestJS · TypeScript",
     "fotoPerfil": "foto-perfil.jpg",
     "email": "lisandroflores23027@gmail.com",
     "cvPdf": "CV_LisandroFlores.pdf"
@@ -44,14 +44,14 @@
   ],
   "proyectos": [
     {
-      "titulo": "NgiCaja - SaaS de punto de venta",
+      "titulo": "NgiCaja — SaaS de Punto de Venta",
       "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada. Incluye arquitectura Offline-First con IndexedDB (Dexie), sincronización en tiempo real por WebSockets, cobro transaccional con idempotencia, integración con Stripe y 979 pruebas automatizadas.",
       "tipo": "demo",
       "demo": "https://caja.ngicode.com",
       "tags": ["React 18", "Vite", "TypeScript", "IndexedDB", "NestJS", "PostgreSQL", "Redis", "Cypress"]
     },
     {
-      "titulo": "Plataforma empresarial - Digyto Solutions",
+      "titulo": "Plataforma Empresarial — Digyto Solutions",
       "descripcion": "Colaboré en un equipo Scrum sobre plataformas SaaS en producción: refactoricé RBAC, onboarding de 6 pasos y conexiones QR en Angular + NestJS/Sequelize, creé un Page Builder con Lazy Loading y desarrollé el motor de facturación multimoneda con Stripe Billing, guardas SAT (CFDI 4.0) y auditoría inmutable sobre PostgreSQL.",
       "tipo": "experiencia",
       "tags": ["Angular", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Stripe", "Scrum"]
@@ -63,7 +63,7 @@
       "tags": ["TypeScript", "Express", "Sequelize", "MySQL", "React", "OWASP", "Jest"]
     },
     {
-      "titulo": "Análisis de Logs en Tiempo Real",
+      "titulo": "Realtime Log Analytics — Ingesta y Monitoreo en Tiempo Real",
       "descripcion": "Servicio autocontenido de ingesta y streaming de logs en tiempo real con Go (Gin), goroutines, channels con backpressure, WebSockets y PostgreSQL. Alcanza 19,037 req/s con 0% de fallos, latencia p99 de 31 ms con 100 clientes concurrentes y un consumo de ~46 MiB de RAM.",
       "repositorio": "https://github.com/lisandro-flores/realtime-logs",
       "tipo": "repositorio",
@@ -90,7 +90,7 @@
       "periodo": "UTTECAM · sep 2024 – may 2026 · Protesta profesional (jun 2026) · Título en trámite · Promedio: 9.45"
     },
     {
-      "titulo": "TSU en Desarrollo de software multiplataforma",
+      "titulo": "TSU en Desarrollo de Software Multiplataforma",
       "periodo": "UTTECAM · sep 2022 – sep 2024"
     }
   ]
