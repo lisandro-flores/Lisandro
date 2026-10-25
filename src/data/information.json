@@ -19,11 +19,11 @@
   "habilidades": [
     {
       "categoria": "Lenguajes de Programación",
-      "items": ["TypeScript", "JavaScript", "Go", "C#"]
+      "items": ["TypeScript", "JavaScript", "Go", "SQL"]
     },
     {
       "categoria": "Backend",
-      "items": ["Node.js", "NestJS", "Express", "REST APIs", "WebSockets (Socket.io)", "Webhooks", "JWT", "RBAC", "Go", ".NET"]
+      "items": ["Node.js", "NestJS", "Express", "REST APIs", "WebSockets (Socket.io)", "Webhooks", "JWT", "RBAC", "Go"]
     },
     {
       "categoria": "Frontend",
@@ -31,7 +31,7 @@
     },
     {
       "categoria": "Bases de Datos",
-      "items": ["PostgreSQL", "Supabase", "Redis", "MySQL", "SQL", "Prisma ORM", "Sequelize", "Entity Framework Core", "MongoDB"]
+      "items": ["PostgreSQL", "Supabase", "Redis", "MySQL", "SQL", "Prisma ORM", "Sequelize", "MongoDB"]
     },
     {
       "categoria": "Calidad y herramientas",
@@ -52,9 +52,9 @@
     },
     {
       "titulo": "Plataforma empresarial - Digyto Solutions",
-      "descripcion": "Colaboré en un equipo Scrum sobre plataformas SaaS en producción: refactoricé RBAC, onboarding de 6 pasos y conexiones QR en Angular + NestJS/Sequelize, creé un Page Builder con Lazy Loading y lideré el motor de facturación multimoneda con Stripe Billing, guardas SAT (CFDI 4.0) y auditoría inmutable en .NET 8 y EF Core.",
+      "descripcion": "Colaboré en un equipo Scrum sobre plataformas SaaS en producción: refactoricé RBAC, onboarding de 6 pasos y conexiones QR en Angular + NestJS/Sequelize, creé un Page Builder con Lazy Loading y desarrollé el motor de facturación multimoneda con Stripe Billing, guardas SAT (CFDI 4.0) y auditoría inmutable sobre PostgreSQL.",
       "tipo": "experiencia",
-      "tags": ["Angular", "TypeScript", ".NET 8", "EF Core", "NestJS", "Stripe", "Scrum"]
+      "tags": ["Angular", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Stripe", "Scrum"]
     },
     {
       "titulo": "CMS Institucional — UTTECAM",
