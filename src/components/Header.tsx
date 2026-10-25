@@ -27,13 +27,29 @@ function Header() {
   return (
     <>
       {/* Overlay oscuro cuando el sidebar está abierto */}
-      {open && <div className="sidebar-overlay" onClick={closeMenu} />}
+      {open && <div className="sidebar-overlay" onClick={closeMenu} aria-hidden="true" />}
 
       <header className="header">
         <nav className="nav container">
-          <a href="#inicio" className="nav-logo" onClick={closeMenu}>Lisandro Flores</a>
+          <a href="#inicio" className="nav-logo" onClick={closeMenu}>
+            Lisandro Flores<span className="logo-dot">.</span>
+          </a>
 
           <div className="nav-actions">
+            <button
+              className="theme-toggle"
+              aria-label={theme === 'dark' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
+              aria-pressed={theme === 'dark' ? 'true' : 'false'}
+              onClick={toggleTheme}
+              title={theme === 'dark' ? 'Tema: oscuro (clic para claro)' : 'Tema: claro (clic para oscuro)'}
+            >
+              {theme === 'dark' ? (
+                <i className="fa-solid fa-moon"></i>
+              ) : (
+                <i className="fa-solid fa-sun"></i>
+              )}
+            </button>
+
             <button
               className="nav-toggle"
               aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
@@ -42,21 +58,7 @@ function Header() {
               onClick={toggleMenu}
             >
               <span className="sr-only">Menú</span>
-              <i className={`fa-solid ${open ? 'fa-times' : 'fa-bars'}`}></i>
-            </button>
-
-            <button
-              className="theme-toggle"
-              aria-label={theme === 'dark' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
-              aria-pressed={theme === 'dark' ? 'true' : 'false'}
-              onClick={toggleTheme}
-              title={theme === 'dark' ? 'Tema: oscuro' : 'Tema: claro'}
-            >
-              {theme === 'dark' ? (
-                <i className="fa-solid fa-moon"></i>
-              ) : (
-                <i className="fa-solid fa-sun"></i>
-              )}
+              <i className={`fa-solid ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
             </button>
           </div>
 
@@ -68,15 +70,21 @@ function Header() {
               </a>
             </li>
             <li className="nav-item">
+              <a href="#skills" className="nav-link" onClick={closeMenu}>
+                <i className="fa-solid fa-layer-group nav-icon"></i>
+                <span className="nav-text">Habilidades</span>
+              </a>
+            </li>
+            <li className="nav-item">
               <a href="#proyectos" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-code nav-icon"></i>
+                <i className="fa-solid fa-laptop-code nav-icon"></i>
                 <span className="nav-text">Proyectos</span>
               </a>
             </li>
             <li className="nav-item">
               <a href="#formacion" className="nav-link" onClick={closeMenu}>
                 <i className="fa-solid fa-graduation-cap nav-icon"></i>
-                <span className="nav-text">Formación</span>
+                <span className="nav-text">Educación</span>
               </a>
             </li>
             <li className="nav-item">
