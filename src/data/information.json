@@ -13,29 +13,29 @@
   "sobreMi": {
     "parrafos": [
       "Desarrollador Full Stack e Ingeniero en Desarrollo y Gestión de Software, con experiencia construyendo interfaces web responsivas con React, Angular, TypeScript y Tailwind CSS, además de APIs REST escalables con Node.js y NestJS.",
-      "He llevado plataformas SaaS y sistemas web a producción con usuarios reales: diseñé y construí como fundador NgiCaja (punto de venta B2B disponible en web, PWA y Android con 109 endpoints y 979 pruebas automatizadas), y en Digyto Solutions desarrollé módulos de facturación multimoneda con Stripe y arquitectura en Angular. Me enfoco en código modular, alta confiabilidad operativa y pipelines de CI/CD con Docker y Linux."
+      "He llevado plataformas SaaS y sistemas web a producción con usuarios reales: diseñé y construí de punta a punta NgiCaja (punto de venta B2B disponible en web, PWA y Android con operación Offline-First, 109 endpoints y 979 pruebas automatizadas), y en Digyto Solutions desarrollé módulos de facturación multimoneda con Stripe y arquitectura en Angular dentro de un equipo Scrum. Me enfoco en código modular, alta confiabilidad operativa y pipelines de CI/CD con Docker y Linux."
     ]
   },
   "habilidades": [
     {
       "categoria": "Lenguajes de Programación",
-      "items": ["TypeScript", "JavaScript", "Go"]
+      "items": ["TypeScript", "JavaScript", "Go", "C#"]
     },
     {
       "categoria": "Backend",
-      "items": ["Node.js", "NestJS", "Express", "REST APIs", "Webhooks", "JWT", "RBAC", "WebSockets", "Go"]
+      "items": ["Node.js", "NestJS", "Express", "REST APIs", "WebSockets (Socket.io)", "Webhooks", "JWT", "RBAC", "Go", ".NET"]
     },
     {
       "categoria": "Frontend",
-      "items": ["TypeScript", "React", "Angular", "Tailwind CSS", "Ionic", "Capacitor", "Next.js", "HTML", "CSS"]
+      "items": ["TypeScript", "React", "Angular", "Astro", "Vite", "Tailwind CSS", "React Query", "IndexedDB (Dexie)", "Capacitor", "Next.js", "HTML", "CSS"]
     },
     {
       "categoria": "Bases de Datos",
-      "items": ["PostgreSQL", "MySQL", "MongoDB", "SQL", "Prisma ORM"]
+      "items": ["PostgreSQL", "Supabase", "Redis", "MySQL", "SQL", "Prisma ORM", "Sequelize", "Entity Framework Core", "MongoDB"]
     },
     {
       "categoria": "Calidad y herramientas",
-      "items": ["Docker", "Linux", "Git/GitHub", "CI/CD", "Jest", "Cypress", "Postman", "Scrum"]
+      "items": ["Docker", "Linux", "Git/GitHub", "CI/CD", "Jest", "Vitest", "Supertest", "Cypress", "Playwright", "Postman", "Scrum"]
     },
     {
       "categoria": "Idiomas",
@@ -45,29 +45,43 @@
   "proyectos": [
     {
       "titulo": "NgiCaja - SaaS de punto de venta",
-      "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada. Incluye interfaces responsivas para ventas, inventario, tickets, reportes y suscripciones, además de operación offline, integración con Stripe y pruebas automatizadas.",
+      "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada. Incluye arquitectura Offline-First con IndexedDB (Dexie), sincronización en tiempo real por WebSockets, cobro transaccional con idempotencia, integración con Stripe y 979 pruebas automatizadas.",
       "tipo": "demo",
       "demo": "https://caja.ngicode.com",
-      "tags": ["React", "Ionic", "TypeScript", "NestJS", "PostgreSQL", "Cypress"]
+      "tags": ["React 18", "Vite", "TypeScript", "IndexedDB", "NestJS", "PostgreSQL", "Redis", "Cypress"]
     },
     {
       "titulo": "Plataforma empresarial - Digyto Solutions",
-      "descripcion": "Trabajé en una plataforma SaaS con Angular y TypeScript: refactoricé módulos de RBAC, onboarding y conexiones con QR, y construí un Page Builder con exportación a HTML estático y Lazy Loading.",
+      "descripcion": "Colaboré en un equipo Scrum sobre plataformas SaaS en producción: refactoricé RBAC, onboarding de 6 pasos y conexiones QR en Angular + NestJS/Sequelize, creé un Page Builder con Lazy Loading y lideré el motor de facturación multimoneda con Stripe Billing, guardas SAT (CFDI 4.0) y auditoría inmutable en .NET 8 y EF Core.",
       "tipo": "experiencia",
-      "tags": ["Angular", "TypeScript", "HTML", "Lazy Loading", "SaaS"]
+      "tags": ["Angular", "TypeScript", ".NET 8", "EF Core", "NestJS", "Stripe", "Scrum"]
     },
     {
       "titulo": "CMS Institucional — UTTECAM",
-      "descripcion": "Diseñé y desplegué en producción una API REST con Node.js, Express, JWT y CRUD para 7 secciones administrables del sitio web institucional, reduciendo tiempos de actualización de contenido de días de trámite a aproximadamente 30 minutos.",
+      "descripcion": "Diseñé y desplegué en producción la API REST (TypeScript, Express, Sequelize ORM, MySQL) y el Dashboard administrativo (React, Vite, Tailwind) para 7 secciones institucionales con seguridad OWASP Top 10 (Helmet, Rate-Limiting, JWT y Winston), reduciendo actualizaciones de contenido de días a ~30 minutos.",
       "tipo": "institucional",
-      "tags": ["Node.js", "Express", "JWT", "cPanel", "Producción"]
+      "tags": ["TypeScript", "Express", "Sequelize", "MySQL", "React", "OWASP", "Jest"]
     },
     {
       "titulo": "Análisis de Logs en Tiempo Real",
-      "descripcion": "Diseñé la arquitectura inicial para un sistema de análisis de logs, implementando un backend de alto rendimiento con Go (Gin), WebSockets para transmisión en vivo y PostgreSQL.",
+      "descripcion": "Servicio autocontenido de ingesta y streaming de logs en tiempo real con Go (Gin), goroutines, channels con backpressure, WebSockets y PostgreSQL. Alcanza 19,037 req/s con 0% de fallos, latencia p99 de 31 ms con 100 clientes concurrentes y un consumo de ~46 MiB de RAM.",
       "repositorio": "https://github.com/lisandro-flores/realtime-logs",
       "tipo": "repositorio",
-      "tags": ["Go", "Gin", "WebSockets", "PostgreSQL", "Rendimiento"]
+      "tags": ["Go", "Gin", "WebSockets", "PostgreSQL", "Concurrencia", "Docker"]
+    },
+    {
+      "titulo": "Pétalos Mary — Catálogo Web y Motor Editorial PDF",
+      "descripcion": "Plataforma comercial en producción construida con Astro 5, React 19, Tailwind CSS y Keystatic CMS (Git-based). Incluye un pipeline automatizado en Node.js (PDFKit, Sharp y QRCode) que maqueta en prebuild un catálogo editorial de 20 páginas con 120 productos optimizados en WebP.",
+      "tipo": "demo",
+      "demo": "https://petalosmary.ngicode.com",
+      "tags": ["Astro 5", "React 19", "TypeScript", "Keystatic CMS", "PDFKit", "Sharp", "Playwright"]
+    },
+    {
+      "titulo": "MotoSpeed — PWA Offline-First de Telemetría GPS",
+      "descripcion": "Aplicación web progresiva (PWA) y Android (Capacitor) para registro de viajes sin conexión a internet. Implementa filtro de Kalman y suavizado exponencial (EMA) para estabilizar lecturas GPS, procesamiento en Web Workers, persistencia local con IndexedDB (Dexie.js) y Wake Lock API.",
+      "repositorio": "https://github.com/lisandro-flores/velocimetro",
+      "tipo": "repositorio",
+      "tags": ["TypeScript", "Vite", "PWA", "IndexedDB", "Web Workers", "Capacitor", "Vitest"]
     }
   ],
   "formacion": [
