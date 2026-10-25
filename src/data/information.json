@@ -35,7 +35,7 @@
     },
     {
       "categoria": "Calidad y herramientas",
-      "items": ["Docker", "Linux", "Git/GitHub", "CI/CD", "Jest", "Vitest", "Supertest", "Cypress", "Playwright", "Postman", "Scrum"]
+      "items": ["Docker", "Linux", "Oracle Cloud (OCI)", "Traefik", "Prometheus/Grafana", "Git/GitHub", "CI/CD", "Jest", "Vitest", "Supertest", "Cypress", "Playwright", "Scrum"]
     },
     {
       "categoria": "Idiomas",
