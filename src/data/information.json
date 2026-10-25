@@ -71,7 +71,7 @@
     },
     {
       "titulo": "Pétalos Mary — Catálogo Web y Motor Editorial PDF",
-      "descripcion": "Plataforma comercial en producción construida con Astro 5, React 19, Tailwind CSS y Keystatic CMS (Git-based). Incluye un pipeline automatizado en Node.js (PDFKit, Sharp y QRCode) que maqueta en prebuild un catálogo editorial de 20 páginas con 120 productos optimizados en WebP.",
+      "descripcion": "Catálogo web comercial en producción construido con Astro 5, React 19, Tailwind CSS y Keystatic CMS (Git-based). Incluye un pipeline automatizado en Node.js (PDFKit, Sharp y QRCode) que maqueta en prebuild un catálogo editorial de 20 páginas con 120 productos optimizados en WebP.",
       "tipo": "demo",
       "demo": "https://petalosmary.ngicode.com",
       "tags": ["Astro 5", "React 19", "TypeScript", "Keystatic CMS", "PDFKit", "Sharp", "Playwright"]
