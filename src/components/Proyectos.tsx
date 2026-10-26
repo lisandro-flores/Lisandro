@@ -1,3 +1,5 @@
+import { motion } from 'motion/react'
+import type { Variants } from 'motion/react'
 import data from '../data/information.json'
 
 interface Proyecto {
@@ -8,6 +10,31 @@ interface Proyecto {
   repositorio?: string;
   tags?: string[];
 }
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.05
+    }
+  }
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 130,
+      damping: 18,
+      mass: 0.85
+    }
+  }
+};
 
 function getTipoBadge(tipo: string) {
   switch (tipo) {
@@ -51,7 +78,13 @@ function Proyectos() {
     <section className="proyectos" id="proyectos">
       <h2 className="section-title reveal">Proyectos Destacados</h2>
       
-      <div className="proyectos-container container grid">
+      <motion.div
+        className="proyectos-container container grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {proyectos.map((proyecto, index) => {
           const badge = getTipoBadge(proyecto.tipo);
           const isFeatured = index === 0;
@@ -59,9 +92,14 @@ function Proyectos() {
           const subtitulo = resto.join(' — ');
 
           return (
-            <article
+            <motion.article
               key={index}
-              className={`proyecto-card ${isFeatured ? 'proyecto-card-featured' : ''} reveal reveal-delay-${(index % 3) + 1}`}
+              variants={cardVariants}
+              whileHover={{
+                y: -7,
+                transition: { type: 'spring', stiffness: 350, damping: 20 }
+              }}
+              className={`proyecto-card ${isFeatured ? 'proyecto-card-featured' : ''}`}
             >
               <div className="proyecto-header">
                 <span className={`proyecto-badge ${badge.className}`}>
@@ -92,26 +130,32 @@ function Proyectos() {
                 
                 <div className="proyecto-links">
                   {proyecto.demo && (
-                    <a
+                    <motion.a
                       href={proyecto.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button button-proyecto button-demo"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 15 }}
                     >
                       <span>Ver Demo</span>
                       <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                    </motion.a>
                   )}
                   {proyecto.repositorio && (
-                    <a
+                    <motion.a
                       href={proyecto.repositorio}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button button-proyecto button-repo"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 15 }}
                     >
                       <i className="fa-brands fa-github"></i>
                       <span>Repositorio</span>
-                    </a>
+                    </motion.a>
                   )}
                   {proyecto.tipo === 'experiencia' && !proyecto.demo && !proyecto.repositorio && (
                     <span className="proyecto-status">
@@ -125,10 +169,10 @@ function Proyectos() {
                   )}
                 </div>
               </div>
-            </article>
+            </motion.article>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

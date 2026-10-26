@@ -1,9 +1,35 @@
+import { motion } from 'motion/react'
+import type { Variants } from 'motion/react'
 import data from '../data/information.json'
 
 interface HabilidadGrupo {
   categoria: string;
   items: string[];
 }
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.05
+    }
+  }
+};
+
+const boxVariants: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 130,
+      damping: 18
+    }
+  }
+};
 
 function getCategoryIcon(categoria: string): string {
   const cat = categoria.toLowerCase();
@@ -63,9 +89,19 @@ function Skills() {
   return (
     <section className="skills" id="skills">
       <h2 className="section-title reveal">Habilidades</h2>
-      <div className="skills-container container grid">
+      <motion.div
+        className="skills-container container grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {habilidades.map((grupo, index) => (
-          <div key={index} className={`skill-box reveal reveal-delay-${(index % 3) + 1}`}>
+          <motion.div
+            key={index}
+            variants={boxVariants}
+            className="skill-box"
+          >
             <div className="skill-box-header">
               <span className="skill-box-icon">
                 <i className={getCategoryIcon(grupo.categoria)}></i>
@@ -74,15 +110,24 @@ function Skills() {
             </div>
             <ul className="skill-list">
               {grupo.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="skill-item">
+                <motion.li
+                  key={itemIndex}
+                  className="skill-item"
+                  whileHover={{
+                    y: -2,
+                    scale: 1.04,
+                    transition: { type: 'spring', stiffness: 450, damping: 15 }
+                  }}
+                  whileTap={{ scale: 0.96 }}
+                >
                   <i className={`${getSkillIcon(item)} skill-item-icon`}></i>
                   <span>{item}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

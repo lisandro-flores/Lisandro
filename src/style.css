@@ -254,15 +254,59 @@ a {
     .nav-toggle { display: none; }
     .sidebar-overlay { display: none; }
     
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: .25rem .35rem;
+        border-radius: 999px;
+    }
+
+    html[data-theme='light'] .nav-menu {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
     .nav-link {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        padding: .45rem 1rem;
+        border-radius: 999px;
+        position: relative;
+        z-index: 1;
+        font-size: .88rem;
+        transition: color .2s ease;
+    }
+
+    .nav-link.active {
+        color: var(--color-primario);
+        text-decoration: none;
+    }
+
+    .nav-active-pill {
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        background: rgba(47, 140, 255, 0.12);
+        border: 1px solid rgba(47, 140, 255, 0.25);
+        z-index: -1;
+    }
+
+    html[data-theme='light'] .nav-active-pill {
+        background: rgba(47, 140, 255, 0.09);
+        border-color: rgba(47, 140, 255, 0.25);
     }
     
     .nav-icon {
-        font-size: 1rem;
-        opacity: 0.8;
+        font-size: 0.95rem;
+        opacity: 0.85;
     }
     
     .nav-link:hover .nav-icon {
@@ -457,8 +501,6 @@ img {
 
 .nav-link.active {
     color: var(--color-primario);
-    text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
 .button:focus {
@@ -648,7 +690,7 @@ html[data-theme='light'] .skill-box-header {
     border: 1px solid rgba(255, 255, 255, 0.07);
     font-size: .83rem;
     color: var(--color-texto);
-    transition: all .25s ease;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
 }
 
 html[data-theme='light'] .skill-item {
@@ -665,7 +707,6 @@ html[data-theme='light'] .skill-item {
     background: rgba(47, 140, 255, 0.1);
     border-color: rgba(47, 140, 255, 0.3);
     color: var(--color-titulo);
-    transform: translateY(-2px);
 }
 
 html[data-theme='light'] .skill-item:hover {
@@ -694,7 +735,7 @@ html[data-theme='light'] .skill-item:hover {
     padding: 1.75rem;
     border-radius: 1.25rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color .3s ease, box-shadow .3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
@@ -751,7 +792,6 @@ html[data-theme='light'] .proyecto-card-featured {
 }
 
 .proyecto-card:hover {
-    transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     border-color: rgba(47, 140, 255, 0.3);
 }

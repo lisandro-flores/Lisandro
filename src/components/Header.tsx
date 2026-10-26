@@ -1,6 +1,20 @@
 import { useState, useCallback, useEffect } from 'react'
+import { motion } from 'motion/react'
 
-function Header() {
+interface HeaderProps {
+  activeSection?: string;
+  setActiveSection?: (id: string) => void;
+}
+
+const navItems = [
+  { id: 'sobre-mi', label: 'Sobre Mí', icon: 'fa-solid fa-user' },
+  { id: 'skills', label: 'Habilidades', icon: 'fa-solid fa-layer-group' },
+  { id: 'proyectos', label: 'Proyectos', icon: 'fa-solid fa-code' },
+  { id: 'formacion', label: 'Formación', icon: 'fa-solid fa-graduation-cap' },
+  { id: 'contacto', label: 'Contacto', icon: 'fa-solid fa-envelope' },
+]
+
+function Header({ activeSection = 'inicio', setActiveSection }: HeaderProps) {
   const [open, setOpen] = useState(false)
   const [theme, setTheme] = useState<'light' | 'dark'>(() =>
     (document.documentElement.getAttribute('data-theme') as 'light' | 'dark') || 'dark'
@@ -31,7 +45,16 @@ function Header() {
 
       <header className="header">
         <nav className="nav container">
-          <a href="#inicio" className="nav-logo" onClick={closeMenu}>Lisandro Flores</a>
+          <a
+            href="#inicio"
+            className="nav-logo"
+            onClick={() => {
+              setActiveSection?.('inicio')
+              closeMenu()
+            }}
+          >
+            Lisandro Flores
+          </a>
 
           <div className="nav-actions">
             <button
@@ -61,41 +84,36 @@ function Header() {
           </div>
 
           <ul id="primary-menu" className={`nav-menu ${open ? 'open' : ''}`}>
-            <li className="nav-item">
-              <a href="#sobre-mi" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-user nav-icon"></i>
-                <span className="nav-text">Sobre Mí</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#skills" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-layer-group nav-icon"></i>
-                <span className="nav-text">Habilidades</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#proyectos" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-code nav-icon"></i>
-                <span className="nav-text">Proyectos</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#formacion" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-graduation-cap nav-icon"></i>
-                <span className="nav-text">Formación</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#contacto" className="nav-link" onClick={closeMenu}>
-                <i className="fa-solid fa-envelope nav-icon"></i>
-                <span className="nav-text">Contacto</span>
-              </a>
-            </li>
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id
+              return (
+                <li key={item.id} className="nav-item">
+                  <a
+                    href={`#${item.id}`}
+                    className={`nav-link ${isActive ? 'active' : ''}`}
+                    onClick={() => {
+                      setActiveSection?.(item.id)
+                      closeMenu()
+                    }}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="activeNavPill"
+                        className="nav-active-pill"
+                        transition={{ type: 'spring', stiffness: 380, damping: 28 }}
+                      />
+                    )}
+                    <i className={`${item.icon} nav-icon`}></i>
+                    <span className="nav-text">{item.label}</span>
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </nav>
       </header>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header
