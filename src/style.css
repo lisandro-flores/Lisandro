@@ -805,9 +805,34 @@ html[data-theme='light'] .proyecto-card:hover {
 .proyecto-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-bottom: var(--mb-1);
     gap: .5rem;
+}
+
+.proyecto-header-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+}
+
+.proyecto-number {
+    font-family: var(--fuente-mono, ui-monospace, SFMono-Regular, monospace);
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    opacity: 0.9;
+    letter-spacing: .04em;
+    background: rgba(47, 140, 255, 0.08);
+    padding: .2rem .55rem;
+    border-radius: .4rem;
+    border: 1px solid rgba(47, 140, 255, 0.2);
+}
+
+html[data-theme='light'] .proyecto-number {
+    background: rgba(47, 140, 255, 0.07);
+    color: var(--color-primario-alt);
+    border-color: rgba(47, 140, 255, 0.25);
 }
 
 .proyecto-featured-tag {
@@ -1022,6 +1047,155 @@ html[data-theme='light'] .button-repo:hover {
     gap: .45rem;
     color: var(--color-texto-claro);
     font-size: .82rem;
+}
+
+/* ======== SHOWCASE HORIZONTAL DE PROYECTOS (DESKTOP) ======== */
+.proyectos-showcase-section {
+    position: relative;
+    height: 380vh;
+    padding: 0;
+}
+
+.proyectos-sticky-window {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: calc(var(--header-height) + 1.25rem);
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.proyectos-showcase-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.proyectos-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--color-primario);
+    margin-bottom: .25rem;
+}
+
+html[data-theme='light'] .proyectos-kicker {
+    color: var(--color-primario-alt);
+}
+
+.proyectos-showcase-header .section-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.proyectos-showcase-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: .84rem;
+    font-weight: 500;
+    color: var(--color-texto);
+    background: var(--color-container);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: .45rem 1rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme='light'] .proyectos-showcase-hint {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.proyectos-counter-badge {
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .15rem .6rem;
+    background: rgba(47, 140, 255, 0.15);
+    color: var(--color-primario);
+    border-radius: 999px;
+}
+
+html[data-theme='light'] .proyectos-counter-badge {
+    background: rgba(47, 140, 255, 0.12);
+    color: var(--color-primario-alt);
+}
+
+.proyectos-track-viewport {
+    width: 100%;
+    overflow: visible;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.proyectos-horizontal-track {
+    display: flex;
+    gap: 2.25rem;
+    padding-left: max(2rem, calc((100vw - 960px) / 2));
+    padding-right: 6rem;
+    will-change: transform;
+}
+
+.proyecto-card-showcase {
+    width: clamp(420px, 34vw, 520px);
+    flex: 0 0 auto;
+    height: 520px;
+    max-height: calc(100vh - 16rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proyecto-card-showcase .proyecto-nombre {
+    font-size: 1.25rem;
+}
+
+.proyecto-card-showcase .proyecto-descripcion {
+    font-size: .92rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Barra de progreso inferior */
+.proyectos-progress-track {
+    width: calc(100% - 4rem);
+    max-width: 960px;
+    margin: 1rem auto 0;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+
+html[data-theme='light'] .proyectos-progress-track {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.proyectos-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--color-primario), #38bdf8);
+    border-radius: 999px;
+    transform-origin: left;
+    box-shadow: 0 0 14px rgba(47, 140, 255, 0.5);
 }
 
 /* ======== FORMACIÓN ======== */
