@@ -54,16 +54,32 @@ function Proyectos() {
       <div className="proyectos-container container grid">
         {proyectos.map((proyecto, index) => {
           const badge = getTipoBadge(proyecto.tipo);
+          const isFeatured = index === 0;
+          const [nombre, ...resto] = proyecto.titulo.split(' — ');
+          const subtitulo = resto.join(' — ');
+
           return (
-            <article key={index} className={`proyecto-card reveal reveal-delay-${(index % 3) + 1}`}>
+            <article
+              key={index}
+              className={`proyecto-card ${isFeatured ? 'proyecto-card-featured' : ''} reveal reveal-delay-${(index % 3) + 1}`}
+            >
               <div className="proyecto-header">
                 <span className={`proyecto-badge ${badge.className}`}>
                   <i className={badge.icon}></i> {badge.label}
                 </span>
+                {isFeatured && (
+                  <span className="proyecto-featured-tag">
+                    <i className="fa-solid fa-star"></i> Proyecto Principal
+                  </span>
+                )}
               </div>
 
               <div className="proyecto-content">
-                <h4 className="proyecto-titulo">{proyecto.titulo}</h4>
+                <div className="proyecto-title-group">
+                  <h4 className="proyecto-nombre">{nombre}</h4>
+                  {subtitulo && <span className="proyecto-subtitulo">{subtitulo}</span>}
+                </div>
+
                 <p className="proyecto-descripcion">{proyecto.descripcion}</p>
                 
                 {proyecto.tags && proyecto.tags.length > 0 && (
