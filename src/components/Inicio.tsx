@@ -36,7 +36,7 @@ function Inicio() {
         </div>
         
         <div className="inicio-img">
-          <img src={fotoUrl} alt={`Foto de ${personal.nombre}`} className="inicio-foto" width={250} height={250} />
+          <img src={fotoUrl} alt={`Foto de ${personal.nombre}`} className="inicio-foto" width={250} height={250} decoding="async" />
         </div>
       </div>
     </section>

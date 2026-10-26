@@ -13,7 +13,7 @@
   "sobreMi": {
     "parrafos": [
       "Desarrollador Full Stack e Ingeniero en Desarrollo y Gestión de Software, con experiencia construyendo interfaces web responsivas con React, Angular, TypeScript y Tailwind CSS, además de APIs REST escalables con Node.js y NestJS.",
-      "He llevado plataformas SaaS y sistemas web a producción con usuarios reales: diseñé y construí de punta a punta NgiCaja (punto de venta B2B disponible en web, PWA y Android con operación Offline-First, 109 endpoints y 979 pruebas automatizadas), y en Digyto Solutions desarrollé módulos de facturación multimoneda con Stripe y arquitectura en Angular dentro de un equipo Scrum. Me enfoco en código modular, alta confiabilidad operativa y pipelines de CI/CD con Docker y Linux."
+      "He desarrollado y publicado plataformas SaaS y sistemas web: diseñé y construí de punta a punta NgiCaja (punto de venta B2B disponible en web, PWA y Android, actualmente en validación piloto acompañada, con operación Offline-First, 109 endpoints y 979 pruebas automatizadas), y en Digyto Solutions desarrollé módulos de facturación multimoneda con Stripe y arquitectura en Angular dentro de un equipo Scrum. Me enfoco en código modular, alta confiabilidad operativa y pipelines de CI/CD con Docker y Linux."
     ]
   },
   "habilidades": [
@@ -45,7 +45,7 @@
   "proyectos": [
     {
       "titulo": "NgiCaja — SaaS de Punto de Venta",
-      "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada. Incluye arquitectura Offline-First con IndexedDB (Dexie), sincronización en tiempo real por WebSockets, cobro transaccional con idempotencia, integración con Stripe y 979 pruebas automatizadas.",
+      "descripcion": "Aplicación SaaS para punto de venta disponible en web, PWA y Android mediante una beta cerrada y actualmente en validación piloto acompañada. Incluye arquitectura Offline-First con IndexedDB (Dexie), sincronización en tiempo real por WebSockets, cobro transaccional con idempotencia, integración con Stripe y 979 pruebas automatizadas.",
       "tipo": "demo",
       "demo": "https://caja.ngicode.com",
       "tags": ["React 18", "Vite", "TypeScript", "IndexedDB", "NestJS", "PostgreSQL", "Redis", "Cypress"]
