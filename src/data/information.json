@@ -82,6 +82,13 @@
       "repositorio": "https://github.com/lisandro-flores/velocimetro",
       "tipo": "repositorio",
       "tags": ["TypeScript", "Vite", "PWA", "IndexedDB", "Web Workers", "Capacitor", "Vitest"]
+    },
+    {
+      "titulo": "dev-job-hub — Local-First Job Search & Tracking Pipeline",
+      "descripcion": "Toolkit open-source de tooling para desarrolladores: motores de búsqueda multi-fuente (Get on Board, Hireline, LinkedIn, Freehire) con APIs nativas (Zero Dependencies), análisis de demanda técnica, CI con GitHub Actions, Centro de Mando offline y PWA móvil de estudio.",
+      "repositorio": "https://github.com/lisandro-flores/dev-job-hub",
+      "tipo": "repositorio",
+      "tags": ["TypeScript", "Node.js", "Python", "Local-First", "CI/CD", "PWA", "Open Source"]
     }
   ],
   "formacion": [
